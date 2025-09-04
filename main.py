@@ -57,21 +57,21 @@ def F2():
     entry1 = tk.Entry(frame4)
     entry1.place(x=17.5, y=30)
 
-    Label2 = tk.Label(frame4, text="Впишіть Значення (0-100)")
-    Label2.place(x=7.5, y=5)
+    Label2 = tk.Label(frame4, text="enter the value (0-100)")
+    Label2.place(x=18, y=5)
 
     def F6():
         global beta
         try:
             beta = int(entry1.get())
             beta = (beta - 50) * 5.1
-            print(f"Значення beta: {beta}")
+            print(f"value beta: {beta}")
         except ValueError:
             beta = 0
-            print("Невірне значення для beta!")
+            print("Value for beta is not correct!")
         frame4.destroy()
 
-    button6 = tk.Button(frame4, text="Підтвердити", bg="black", fg="white", bd=5, command=F6)
+    button6 = tk.Button(frame4, text="Apply", bg="black", fg="white", bd=5, command=F6)
     button6.place(x=37.5, y=55, width=80, height=20)
 
 def F3():
@@ -95,13 +95,13 @@ def F5():
             fourcc = cv2.VideoWriter_fourcc(*'XVID')
             out = cv2.VideoWriter(video_path, fourcc, 20.0, (640, 480), isColor=(not gray))
             recording = True
-            button5.config(text="Зупинити запис", bg="darkred")
+            button5.config(text="Stop Recording", bg="darkred")
     else:
         recording = False
         if out:
             out.release()
             out = None
-        button5.config(text="Запис відео", bg="red")
+        button5.config(text="Record Video", bg="red")
 
 
 Wmain = tk.Tk()
@@ -120,22 +120,22 @@ frame2 = tk.Frame(Wmain, bg="#2B2B2B", width=560, height=60)
 frame2.pack()
 frame2.place(x=75, y=530)
 
-button1 = tk.Button(Wmain, text="Оригінал", bg="black", fg="white", bd=5, command=F1)
+button1 = tk.Button(Wmain, text="Original", bg="black", fg="white", bd=5, command=F1)
 button1.pack()
 button1.place(x=85, y=540, width=100, height=40)
 
-button2 = tk.Button(Wmain, text="Яскравість", bg="#55D7FF", fg="black", bd=5, command=F2)
+button2 = tk.Button(Wmain, text="Brightness", bg="#55D7FF", fg="black", bd=5, command=F2)
 button2.pack()
 button2.place(x=195, y=540, width=100, height=40)
 
-button3 = tk.Button(Wmain, text="Чорно-Білий", bg="#8F8F8F", fg="white", bd=5, command=F3)
+button3 = tk.Button(Wmain, text="Black & White", bg="#8F8F8F", fg="white", bd=5, command=F3)
 button3.place(x=305, y=540, width=100, height=40)
 
-button4 = tk.Button(Wmain, text="Інверсія", bg="white", fg="black", bd=5, command=F4)
+button4 = tk.Button(Wmain, text="Inversion", bg="white", fg="black", bd=5, command=F4)
 button4.pack()
 button4.place(x=415, y=540, width=100, height=40)
 
-button5 = tk.Button(Wmain, text="Запис відео", bg="red", fg="white", bd=5, command=F5)
+button5 = tk.Button(Wmain, text="Record Vide", bg="red", fg="white", bd=5, command=F5)
 button5.pack()
 button5.place(x=525, y=540, width=100, height=40)
 
