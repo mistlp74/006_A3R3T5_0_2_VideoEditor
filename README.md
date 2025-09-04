@@ -1,8 +1,8 @@
-# WebcamEffectsRecorder
+# VideoEditor
 
 ## Description
 
-**WebcamEffectsRecorder** is a simple desktop application using Python and Tkinter that allows you to view your webcam feed with real-time effects, adjust brightness, convert to grayscale, invert colors, and record video with the selected effect.
+**VideoEditor** is a simple desktop application using Python and Tkinter that allows you to view your webcam feed with real-time effects, adjust brightness, convert to grayscale, invert colors, and record video with the selected effect.
 
 ---
 
